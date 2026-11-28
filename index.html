@@ -1,84 +1,481 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#17151F">
-  <meta name="description" content="Gongpe Technologies designs and develops digital platforms, business systems and practical technology solutions.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="author" content="Gongpe Technologies">
-  <title>Gongpe Technologies | Digital Platforms & Business Technology</title>
-  <link rel="canonical" href="https://tech.gongpe.com/">
-  <link rel="icon" href="assets/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/favicon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Gongpe Technologies | Technology that works for business">
-  <meta property="og:description" content="Digital platforms, business systems, product engineering and intelligent solutions.">
-  <meta property="og:url" content="https://tech.gongpe.com/">
-  <meta property="og:site_name" content="Gongpe Technologies">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Gongpe Technologies">
-  <meta name="twitter:description" content="Technology that works for business.">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Gongpe Technologies","url":"https://tech.gongpe.com/","parentOrganization":{"@type":"Organization","name":"Gongpe Group","url":"https://gongpe.com/"},"description":"Digital platforms, business systems, product engineering and technology solutions for businesses.","email":"support@gongpe.com","address":{"@type":"PostalAddress","addressLocality":"Kathmandu","addressCountry":"NP"},"areaServed":{"@type":"Country","name":"Nepal"}}
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/tailwind.css">
-  <style>
-    :root{scroll-behavior:smooth} body{background:#17151f;color:#f4f1fa;font-family:'DM Sans',sans-serif} h1,h2,h3,.display{font-family:Manrope,sans-serif} .eyebrow{letter-spacing:.17em} .navlink{color:#c7c1d2;transition:color .2s}.navlink:hover{color:#fff}
-    .hero-grid{background-image:linear-gradient(rgba(184,162,255,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(184,162,255,.075) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to right,transparent,black 35%,black)}
-    .hero-orb{background:radial-gradient(circle at 50% 50%,rgba(118,82,214,.34),rgba(118,82,214,.08) 42%,transparent 70%);filter:blur(4px)}
-    .tech-pattern{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='420' viewBox='0 0 560 420' fill='none' stroke='%23d9ccff' stroke-opacity='.23' stroke-width='1.5'%3E%3Cpath d='M60 80h120v80h120v-80h140v100h-90v100H210v-80H80v100'/%3E%3Ccircle cx='60' cy='80' r='7' fill='%23d9ccff'/%3E%3Ccircle cx='180' cy='160' r='7' fill='%23d9ccff'/%3E%3Ccircle cx='300' cy='160' r='7' fill='%23d9ccff'/%3E%3Ccircle cx='440' cy='80' r='7' fill='%23d9ccff'/%3E%3Ccircle cx='350' cy='260' r='7' fill='%23d9ccff'/%3E%3Ccircle cx='80' cy='300' r='7' fill='%23d9ccff'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right center;background-size:min(65%,560px) auto}
-    .service{position:relative;isolation:isolate;overflow:hidden;transition:transform .25s,border-color .25s}.service:hover{transform:translateY(-4px);border-color:rgba(184,162,255,.5)}.service:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.8;background:radial-gradient(circle at 100% 0%,rgba(118,82,214,.2),transparent 48%)}
-    .number{font-variant-numeric:tabular-nums}.line{height:1px;background:rgba(255,255,255,.12)}
-    .focus:focus-visible{outline:3px solid #b8a2ff;outline-offset:4px}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gongpe Technologies | Digital Platforms & Business Technology</title>
+
+    <!-- Favicons & App Icons (Local Folder relative path) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f4ff',
+                            100: '#e0e9fe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(229, 231, 235, 0.5) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(229, 231, 235, 0.5) 1px, transparent 1px);
+        }
+    </style>
 </head>
-<body class="antialiased">
-<header class="sticky top-0 z-50 border-b border-white/10 bg-[#17151F]/90 backdrop-blur-xl">
-  <div class="mx-auto flex h-[76px] w-full items-center justify-between px-[clamp(1.25rem,5vw,5.5rem)]">
-    <a href="#home" class="focus flex items-center gap-3" aria-label="Gongpe Technologies home"><img src="assets/favicon.png" alt="Gongpe" class="h-10 w-10 rounded-md bg-white p-1 object-contain"><span class="leading-tight"><span class="block text-[15px] font-extrabold tracking-[.12em] text-white">GONGPE</span><span class="block text-[10px] font-semibold tracking-[.22em] text-[#B8A2FF]">TECHNOLOGIES</span></span></a>
-    <nav class="hidden items-center gap-9 md:flex" aria-label="Main navigation"><a class="navlink text-sm" href="#capabilities">Capabilities</a><a class="navlink text-sm" href="#approach">Our approach</a><a class="navlink text-sm" href="#technology">Technology</a><a class="navlink text-sm" href="#about">About</a><a class="focus rounded-lg bg-violet px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#8869E4]" href="#contact">Discuss an engagement</a></nav>
-    <button id="menuButton" class="focus rounded-lg p-2 text-white md:hidden" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileMenu"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-  </div>
-  <nav id="mobileMenu" class="hidden border-t border-white/10 bg-[#17151F] px-5 py-4 md:hidden"><div class="flex flex-col gap-1"><a class="rounded-lg px-3 py-3 text-sm text-slate-200" href="#capabilities">Capabilities</a><a class="rounded-lg px-3 py-3 text-sm text-slate-200" href="#approach">Our approach</a><a class="rounded-lg px-3 py-3 text-sm text-slate-200" href="#technology">Technology</a><a class="rounded-lg px-3 py-3 text-sm text-slate-200" href="#about">About</a><a class="mt-2 rounded-lg bg-violet px-3 py-3 text-center text-sm font-semibold text-white" href="#contact">Discuss an engagement</a></div></nav>
-</header>
-<main id="home">
-  <section class="relative isolate flex min-h-[calc(100svh-76px)] items-center overflow-hidden bg-[#17151F]">
-    <div class="hero-grid absolute inset-0 -z-10 opacity-70"></div><div class="hero-orb absolute -right-40 top-0 -z-10 h-[720px] w-[720px]"></div><div class="tech-pattern absolute inset-0 -z-10 opacity-70"></div>
-    <div class="mx-auto w-full px-[clamp(1.25rem,7vw,7.5rem)] py-24 sm:py-32 lg:py-36">
-      <div class="max-w-4xl">
-        <div class="mb-8 flex items-center gap-3"><span class="h-px w-10 bg-[#A78BFA]"></span><p class="eyebrow text-[11px] font-bold uppercase text-[#B8A2FF]">Business technology & digital solutions</p></div>
-        <h1 class="display max-w-4xl text-4xl font-semibold leading-[1.1] tracking-[-.045em] text-white sm:text-5xl lg:text-6xl">Building digital capabilities <span class="bg-gradient-to-r from-[#B8A2FF] via-[#9C7AF0] to-[#F2A06A] bg-clip-text text-transparent">for business.</span></h1>
-        <p class="mt-8 max-w-2xl text-base leading-8 text-[#C8C3D1] sm:text-lg">We design, develop and implement digital platforms, business systems and technology solutions that turn requirements into practical outcomes.</p>
-        <div class="mt-10 flex flex-col gap-3 sm:flex-row"><a href="#capabilities" class="focus inline-flex items-center justify-center gap-3 rounded-lg bg-violet px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#8869E4]">Explore capabilities <span aria-hidden="true">↗</span></a><a href="#contact" class="focus inline-flex items-center justify-center rounded-lg border border-white/20 px-6 py-4 text-sm font-semibold text-white transition hover:border-[#B8A2FF] hover:bg-white/5">Discuss an engagement</a></div>
-      </div>
-      <div class="mt-20 grid max-w-4xl grid-cols-2 gap-x-6 gap-y-4 border-t border-white/15 pt-6 text-[10px] font-semibold uppercase tracking-[.16em] text-[#AAA4B7] sm:grid-cols-4"><span>Digital platforms</span><span>Business systems</span><span>Product engineering</span><span>Intelligent solutions</span></div>
+<body class="bg-slate-50 text-slate-900 transition-colors duration-300 min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 border-b border-slate-200 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-transform">
+                        G
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg tracking-tight leading-none text-slate-900">GONGPE</span>
+                        <span class="text-[10px] font-semibold tracking-widest text-slate-500 uppercase">Technologies</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Items -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#capabilities" class="text-slate-600 hover:text-brand-600 transition-colors">Capabilities</a>
+                    <a href="#approach" class="text-slate-600 hover:text-brand-600 transition-colors">Our Approach</a>
+                    <a href="#technology" class="text-slate-600 hover:text-brand-600 transition-colors">Technology</a>
+                    <a href="#clients" class="text-slate-600 hover:text-brand-600 transition-colors">Who We Work With</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="hidden md:flex items-center gap-4">
+                    <button onclick="openModal()" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold transition-all shadow-sm hover:shadow">
+                        Discuss an Engagement <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-2 md:hidden">
+                    <button id="mobileMenuBtn" class="p-2 rounded-xl border border-slate-200 text-slate-700">
+                        <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-6 space-y-3">
+            <a href="#capabilities" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-600">Capabilities</a>
+            <a href="#approach" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-600">Our Approach</a>
+            <a href="#technology" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-600">Technology</a>
+            <a href="#clients" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium text-slate-600">Who We Work With</a>
+            <button onclick="toggleMobileMenu(); openModal();" class="w-full mt-2 py-3 rounded-xl bg-slate-900 text-white font-semibold text-center">
+                Discuss an Engagement
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO SECTION -->
+        <section class="relative overflow-hidden grid-pattern py-20 lg:py-32 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-200/70 border border-slate-300/50 text-xs font-medium text-slate-800 mb-6 backdrop-blur-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Business Technology &amp; Digital Solutions
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+                        Building digital capabilities for business.
+                    </h1>
+                    <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal">
+                        We design, develop and implement digital platforms, business systems and technology solutions that turn requirements into practical outcomes.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <button onclick="openModal()" class="px-7 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-base transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                            Discuss an engagement
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </button>
+                        <a href="#capabilities" class="px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-semibold text-base transition-all text-center flex items-center justify-center gap-2">
+                            Explore capabilities
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUE STATEMENT SECTION -->
+        <section class="py-12 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-widest text-slate-400">Technology with purpose</p>
+                        <h2 class="text-2xl font-bold text-slate-900 mt-1">Technology shaped around the way business works.</h2>
+                    </div>
+                    <p class="max-w-xl text-sm sm:text-base text-slate-600">
+                        From digital experiences to the systems behind daily operations, we focus on useful technology that solves clearly defined problems.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAPABILITIES SECTION -->
+        <section id="capabilities" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">Capabilities</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">What we do</h2>
+                </div>
+                <p class="text-slate-500 mt-4 md:mt-0 text-sm max-w-xs">
+                    Comprehensive digital expertise crafted to support every phase of your operational pipeline.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="group p-8 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 transition-all hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Digital Platforms &amp; Applications</h3>
+                        <div class="text-xs font-mono font-bold text-slate-400 mt-1 mb-3">01 / DIGITAL</div>
+                        <p class="text-sm text-slate-600 mb-6">Digital products and web applications designed around customer experiences and business needs.</p>
+                        <ul class="space-y-2.5 text-sm font-medium text-slate-700">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Corporate websites and web applications</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Digital platforms and portals</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Customer-facing applications</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Custom platform development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group p-8 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 transition-all hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Business Systems &amp; Integration</h3>
+                        <div class="text-xs font-mono font-bold text-slate-400 mt-1 mb-3">02 / SYSTEMS</div>
+                        <p class="text-sm text-slate-600 mb-6">Connected information, workflows and applications that support more coordinated operations.</p>
+                        <ul class="space-y-2.5 text-sm font-medium text-slate-700">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Internal business applications</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Database design and management</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Workflow digitisation</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> System and API integrations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group p-8 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 transition-all hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Product Engineering</h3>
+                        <div class="text-xs font-mono font-bold text-slate-400 mt-1 mb-3">03 / ENGINEERING</div>
+                        <p class="text-sm text-slate-600 mb-6">Turning early concepts and business requirements into functional, testable digital products.</p>
+                        <ul class="space-y-2.5 text-sm font-medium text-slate-700">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Product architecture and development</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> MVP development</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Technical prototyping</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Product refinement and iteration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group p-8 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 transition-all hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Automation &amp; Intelligent Solutions</h3>
+                        <div class="text-xs font-mono font-bold text-slate-400 mt-1 mb-3">04 / INTELLIGENCE</div>
+                        <p class="text-sm text-slate-600 mb-6">Practical use of automation and emerging technologies to simplify repetitive work.</p>
+                        <ul class="space-y-2.5 text-sm font-medium text-slate-700">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> AI-assisted business workflows</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Process automation</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Data-driven applications</li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-xs text-emerald-500"></i> Intelligent system integrations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPROACH SECTION -->
+        <section id="approach" class="py-20 bg-slate-100/70 border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-xl mb-16">
+                    <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">Our Approach</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Clear thinking. Thoughtful building. Useful outcomes.</h2>
+                    <p class="text-slate-600 mt-4 text-base">
+                        Good technology starts with understanding the problem. We approach each engagement by clarifying the need, shaping a practical solution and developing it in considered stages.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <!-- Step 1 -->
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm relative">
+                        <span class="text-2xl font-black text-slate-300 font-mono">01</span>
+                        <h4 class="text-lg font-bold text-slate-900 mt-2">Understand</h4>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">Explore context, needs and constraints.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm relative">
+                        <span class="text-2xl font-black text-slate-300 font-mono">02</span>
+                        <h4 class="text-lg font-bold text-slate-900 mt-2">Define</h4>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">Set scope and shape the solution.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm relative">
+                        <span class="text-2xl font-black text-slate-300 font-mono">03</span>
+                        <h4 class="text-lg font-bold text-slate-900 mt-2">Build</h4>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">Develop in focused, practical stages.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm relative">
+                        <span class="text-2xl font-black text-slate-300 font-mono">04</span>
+                        <h4 class="text-lg font-bold text-slate-900 mt-2">Integrate</h4>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">Connect the solution to its environment.</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm relative sm:col-span-2 lg:col-span-1">
+                        <span class="text-2xl font-black text-slate-300 font-mono">05</span>
+                        <h4 class="text-lg font-bold text-slate-900 mt-2">Improve</h4>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">Refine as needs and use evolve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGY ECOSYSTEM SECTION -->
+        <section id="technology" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-xl mb-16">
+                <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">Technology Ecosystem</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">The right tools for the right requirements.</h2>
+                <p class="text-slate-600 mt-4 text-base">
+                    We work with modern development tools and technologies, selecting an approach based on the product, operating context and practical needs of each engagement.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Frontend -->
+                <div class="p-6 rounded-2xl bg-white border border-slate-200">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Frontend</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">Next.js</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">React</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Backend & Data -->
+                <div class="p-6 rounded-2xl bg-white border border-slate-200">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Backend &amp; Data</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">Supabase</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">APIs</span>
+                    </div>
+                </div>
+
+                <!-- Development -->
+                <div class="p-6 rounded-2xl bg-white border border-slate-200">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Development</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">GitHub</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">Cloud Platforms</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">Integration</span>
+                    </div>
+                </div>
+
+                <!-- Emerging Technology -->
+                <div class="p-6 rounded-2xl bg-white border border-slate-200">
+                    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Emerging Tech</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">AI Workflows</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm">Automation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO WE WORK WITH SECTION -->
+        <section id="clients" class="py-20 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-xl mb-16">
+                    <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">Who We Work With</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Technology for organisations at different stages.</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div>
+                        <div class="w-8 h-1 bg-brand-500 mb-6"></div>
+                        <h4 class="text-lg font-bold text-white">Established businesses</h4>
+                        <p class="text-sm text-slate-400 mt-2 leading-relaxed">Digitising processes, improving systems and developing custom applications.</p>
+                    </div>
+
+                    <div>
+                        <div class="w-8 h-1 bg-brand-500 mb-6"></div>
+                        <h4 class="text-lg font-bold text-white">Growing organisations</h4>
+                        <p class="text-sm text-slate-400 mt-2 leading-relaxed">Connecting platforms and information to support evolving operations.</p>
+                    </div>
+
+                    <div>
+                        <div class="w-8 h-1 bg-brand-500 mb-6"></div>
+                        <h4 class="text-lg font-bold text-white">Entrepreneurs</h4>
+                        <p class="text-sm text-slate-400 mt-2 leading-relaxed">Refining product ideas and translating requirements into digital solutions.</p>
+                    </div>
+
+                    <div>
+                        <div class="w-8 h-1 bg-brand-500 mb-6"></div>
+                        <h4 class="text-lg font-bold text-white">Early-stage ventures</h4>
+                        <p class="text-sm text-slate-400 mt-2 leading-relaxed">Exploring concepts, prototyping and building initial product capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA CONVERSATION SECTION -->
+        <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-2xl mx-auto bg-white p-10 sm:p-14 rounded-3xl border border-slate-200 shadow-sm">
+                <h2 class="text-3xl font-extrabold text-slate-900">Start a conversation</h2>
+                <p class="text-slate-600 mt-4 text-base">
+                    Have a business or product challenge to solve? Tell us what you are working on. We would be glad to understand the requirement and explore how technology might help.
+                </p>
+                <button onclick="openModal()" class="mt-8 px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-base transition-all inline-flex items-center gap-2 shadow-md hover:shadow-lg">
+                    Contact Gongpe Technologies <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-black text-sm">
+                        G
+                    </div>
+                    <span class="font-bold text-slate-900 tracking-tight">Gongpe Technologies</span>
+                </div>
+
+                <div class="flex items-center gap-6 text-sm font-medium text-slate-600">
+                    <a href="#" class="hover:text-slate-900 transition-colors">Gongpe Group</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">Gongpe Consulting</a>
+                    <a href="mailto:contact@gongpe.com" class="hover:text-slate-900 transition-colors">Email</a>
+                </div>
+
+                <p class="text-xs text-slate-400">
+                    &copy; 2026 Gongpe Technologies. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ENGAGEMENT MODAL -->
+    <div id="engagementModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 border border-slate-200 shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-slate-900">Discuss an Engagement</h3>
+            <p class="text-sm text-slate-600 mt-1">Tell us about your project or requirement.</p>
+
+            <form onsubmit="handleFormSubmit(event)" class="mt-6 space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Your Name</label>
+                    <input type="text" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-slate-900 text-sm" placeholder="John Doe">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Email Address</label>
+                    <input type="email" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-slate-900 text-sm" placeholder="john@company.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">Project Details</label>
+                    <textarea rows="4" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-slate-900 text-sm" placeholder="Describe your business objective or product requirement..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition-all shadow">
+                    Submit Inquiry
+                </button>
+            </form>
+        </div>
     </div>
-    <div class="pointer-events-none absolute bottom-8 right-[5vw] hidden items-center gap-3 text-[10px] uppercase tracking-[.2em] text-white/35 lg:flex"><span class="h-px w-12 bg-white/25"></span>Technology with purpose</div>
-  </section>
-  <section id="capabilities" class="bg-[#F5F3F8] py-24 text-[#211D2B] sm:py-32">
-    <div class="mx-auto w-full px-[clamp(1.25rem,5vw,5.5rem)]">
-      <div class="mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end"><div><p class="eyebrow text-[11px] font-bold uppercase text-[#7652D6]">What we do</p><h2 class="display mt-4 max-w-2xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">Technology shaped around the way business works.</h2></div><p class="max-w-lg text-base leading-7 text-[#686273]">From digital experiences to the systems behind daily operations, we focus on useful technology that solves clearly defined problems.</p></div>
-      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <article class="service rounded-2xl border border-[#E4DFEB] bg-white p-7"><div class="flex items-center justify-between"><span class="number text-xs font-bold tracking-widest text-[#8B8497]">01 / DIGITAL</span><svg class="h-8 w-8 text-[#7652D6]" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="26" height="24" rx="3"/><path d="M3 10h26M9 7h.01M13 7h.01M8 15h7v8H8zM19 15h5M19 19h5M19 23h5"/></svg></div><h3 class="display mt-12 text-xl font-bold">Digital Platforms & Applications</h3><p class="mt-4 text-sm leading-7 text-[#6D6677]">Digital products and web applications designed around customer experiences and business needs.</p><ul class="mt-7 space-y-3 border-t border-[#EEEAF2] pt-5 text-sm text-[#514B5B]"><li>Corporate websites and web applications</li><li>Digital platforms and portals</li><li>Customer-facing applications</li><li>Custom platform development</li></ul></article>
-        <article class="service rounded-2xl border border-[#E4DFEB] bg-white p-7"><div class="flex items-center justify-between"><span class="number text-xs font-bold tracking-widest text-[#8B8497]">02 / SYSTEMS</span><svg class="h-8 w-8 text-[#7652D6]" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="9" height="7" rx="1.5"/><rect x="19" y="4" width="9" height="7" rx="1.5"/><rect x="11.5" y="21" width="9" height="7" rx="1.5"/><path d="M8.5 11v5h15v-5M16 16v5"/></svg></div><h3 class="display mt-12 text-xl font-bold">Business Systems & Integration</h3><p class="mt-4 text-sm leading-7 text-[#6D6677]">Connected information, workflows and applications that support more coordinated operations.</p><ul class="mt-7 space-y-3 border-t border-[#EEEAF2] pt-5 text-sm text-[#514B5B]"><li>Internal business applications</li><li>Database design and management</li><li>Workflow digitisation</li><li>System and API integrations</li></ul></article>
-        <article class="service rounded-2xl border border-[#E4DFEB] bg-white p-7"><div class="flex items-center justify-between"><span class="number text-xs font-bold tracking-widest text-[#8B8497]">03 / ENGINEERING</span><svg class="h-8 w-8 text-[#7652D6]" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 8-7 8 7 8M20 8l7 8-7 8M18 5l-4 22"/></svg></div><h3 class="display mt-12 text-xl font-bold">Product Engineering</h3><p class="mt-4 text-sm leading-7 text-[#6D6677]">Turning early concepts and business requirements into functional, testable digital products.</p><ul class="mt-7 space-y-3 border-t border-[#EEEAF2] pt-5 text-sm text-[#514B5B]"><li>Product architecture and development</li><li>MVP development</li><li>Technical prototyping</li><li>Product refinement and iteration</li></ul></article>
-        <article class="service rounded-2xl border border-[#E4DFEB] bg-white p-7"><div class="flex items-center justify-between"><span class="number text-xs font-bold tracking-widest text-[#8B8497]">04 / INTELLIGENCE</span><svg class="h-8 w-8 text-[#7652D6]" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 4v5M16 23v5M4 16h5M23 16h5M7.5 7.5l3.5 3.5m10 10 3.5 3.5m0-17-3.5 3.5m-10 10-3.5 3.5"/><circle cx="16" cy="16" r="7"/><path d="M13 16h6m-3-3v6"/></svg></div><h3 class="display mt-12 text-xl font-bold">Automation & Intelligent Solutions</h3><p class="mt-4 text-sm leading-7 text-[#6D6677]">Practical use of automation and emerging technologies to simplify repetitive work.</p><ul class="mt-7 space-y-3 border-t border-[#EEEAF2] pt-5 text-sm text-[#514B5B]"><li>AI-assisted business workflows</li><li>Process automation</li><li>Data-driven applications</li><li>Intelligent system integrations</li></ul></article>
-      </div>
-    </div>
-  </section>
-  <section id="approach" class="relative overflow-hidden bg-[#211D2B] py-24 sm:py-32"><div class="absolute -right-48 top-0 h-[600px] w-[600px] rounded-full bg-violet/15 blur-3xl"></div><div class="relative mx-auto w-full px-[clamp(1.25rem,5vw,5.5rem)]"><div class="max-w-3xl"><p class="eyebrow text-[11px] font-bold uppercase text-[#B8A2FF]">Our approach</p><h2 class="display mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">Clear thinking. Thoughtful building. Useful outcomes.</h2><p class="mt-6 max-w-2xl text-base leading-8 text-[#BDB7C8]">Good technology starts with understanding the problem. We approach each engagement by clarifying the need, shaping a practical solution and developing it in considered stages.</p></div><div class="mt-16 grid gap-0 border-y border-white/15 md:grid-cols-5"> <div class="border-b border-white/15 py-7 md:border-b-0 md:border-r md:pr-6"><span class="number text-sm text-[#B8A2FF]">01</span><h3 class="mt-5 font-semibold text-white">Understand</h3><p class="mt-2 text-sm leading-6 text-[#AFA9BA]">Explore context, needs and constraints.</p></div><div class="border-b border-white/15 py-7 md:border-b-0 md:border-r md:px-6"><span class="number text-sm text-[#B8A2FF]">02</span><h3 class="mt-5 font-semibold text-white">Define</h3><p class="mt-2 text-sm leading-6 text-[#AFA9BA]">Set scope and shape the solution.</p></div><div class="border-b border-white/15 py-7 md:border-b-0 md:border-r md:px-6"><span class="number text-sm text-[#B8A2FF]">03</span><h3 class="mt-5 font-semibold text-white">Build</h3><p class="mt-2 text-sm leading-6 text-[#AFA9BA]">Develop in focused, practical stages.</p></div><div class="border-b border-white/15 py-7 md:border-b-0 md:border-r md:px-6"><span class="number text-sm text-[#B8A2FF]">04</span><h3 class="mt-5 font-semibold text-white">Integrate</h3><p class="mt-2 text-sm leading-6 text-[#AFA9BA]">Connect the solution to its environment.</p></div><div class="py-7 md:pl-6"><span class="number text-sm text-[#B8A2FF]">05</span><h3 class="mt-5 font-semibold text-white">Improve</h3><p class="mt-2 text-sm leading-6 text-[#AFA9BA]">Refine as needs and use evolve.</p></div></div></div></section>
-  <section id="technology" class="bg-[#F5F3F8] py-24 text-[#211D2B] sm:py-28"><div class="mx-auto grid w-full gap-12 px-[clamp(1.25rem,5vw,5.5rem)] lg:grid-cols-[.9fr_1.1fr] lg:items-center"><div><p class="eyebrow text-[11px] font-bold uppercase text-[#7652D6]">Technology ecosystem</p><h2 class="display mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">The right tools for the right requirements.</h2><p class="mt-6 max-w-xl text-base leading-8 text-[#686273]">We work with modern development tools and technologies, selecting an approach based on the product, operating context and practical needs of each engagement.</p></div><div class="grid grid-cols-1 gap-3 sm:grid-cols-2"><div class="rounded-xl border border-[#E4DFEB] bg-white p-6"><span class="text-xs font-bold uppercase tracking-widest text-[#8B8497]">Frontend</span><p class="mt-4 font-semibold">Next.js · React · Tailwind CSS</p></div><div class="rounded-xl border border-[#E4DFEB] bg-white p-6"><span class="text-xs font-bold uppercase tracking-widest text-[#8B8497]">Backend & data</span><p class="mt-4 font-semibold">PostgreSQL · Supabase · APIs</p></div><div class="rounded-xl border border-[#E4DFEB] bg-white p-6"><span class="text-xs font-bold uppercase tracking-widest text-[#8B8497]">Development</span><p class="mt-4 font-semibold">GitHub · Cloud platforms · Integration</p></div><div class="rounded-xl border border-[#E4DFEB] bg-white p-6"><span class="text-xs font-bold uppercase tracking-widest text-[#8B8497]">Emerging technology</span><p class="mt-4 font-semibold">AI-assisted development · Automation</p></div></div></div></section>
-  <section id="about" class="bg-[#17151F] py-24 sm:py-28"><div class="mx-auto grid w-full gap-10 px-[clamp(1.25rem,5vw,5.5rem)] lg:grid-cols-2 lg:items-start"><div><p class="eyebrow text-[11px] font-bold uppercase text-[#B8A2FF]">Who we work with</p><h2 class="display mt-4 max-w-xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">Technology for organisations at different stages.</h2></div><div class="grid gap-7 sm:grid-cols-2"><div><h3 class="font-semibold text-white">Established businesses</h3><p class="mt-2 text-sm leading-7 text-[#AAA4B7]">Digitising processes, improving systems and developing custom applications.</p></div><div><h3 class="font-semibold text-white">Growing organisations</h3><p class="mt-2 text-sm leading-7 text-[#AAA4B7]">Connecting platforms and information to support evolving operations.</p></div><div><h3 class="font-semibold text-white">Entrepreneurs</h3><p class="mt-2 text-sm leading-7 text-[#AAA4B7]">Refining product ideas and translating requirements into digital solutions.</p></div><div><h3 class="font-semibold text-white">Early-stage ventures</h3><p class="mt-2 text-sm leading-7 text-[#AAA4B7]">Exploring concepts, prototyping and building initial product capabilities.</p></div></div></div></section>
-  <section id="contact" class="relative overflow-hidden bg-gradient-to-br from-[#35246E] via-[#4D32A1] to-[#6B3E91] py-24 sm:py-32"><div class="absolute inset-0 tech-pattern opacity-30"></div><div class="relative mx-auto flex w-full flex-col justify-between gap-10 px-[clamp(1.25rem,5vw,5.5rem)] lg:flex-row lg:items-end"><div class="max-w-3xl"><p class="eyebrow text-[11px] font-bold uppercase text-[#E0D6FF]">Start a conversation</p><h2 class="display mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">Have a business or product challenge to solve?</h2><p class="mt-6 max-w-2xl text-base leading-8 text-[#E9E2FA]">Tell us what you are working on. We would be glad to understand the requirement and explore how technology might help.</p></div><a href="mailto:support@gongpe.com?subject=Technology%20Engagement%20Enquiry" class="focus inline-flex shrink-0 items-center justify-center gap-3 rounded-lg bg-white px-7 py-4 text-sm font-bold text-[#392477] transition hover:bg-[#F1ECFF]">Contact Gongpe Technologies <span aria-hidden="true">↗</span></a></div></section>
-</main>
-<footer class="border-t border-white/10 bg-[#121018]"><div class="mx-auto flex w-full flex-col gap-8 px-[clamp(1.25rem,5vw,5.5rem)] py-10 md:flex-row md:items-center md:justify-between"><a href="#home" class="flex items-center gap-3"><img src="assets/favicon.png" alt="Gongpe" class="h-9 w-9 rounded-md bg-white p-1 object-contain"><span><span class="block text-sm font-extrabold tracking-[.12em] text-white">GONGPE</span><span class="block text-[9px] font-semibold tracking-[.2em] text-[#B8A2FF]">TECHNOLOGIES</span></span></a><div class="flex flex-wrap gap-x-7 gap-y-3 text-sm text-[#AAA4B7]"><a class="hover:text-white" href="https://gongpe.com/">Gongpe Group</a><a class="hover:text-white" href="https://consulting.gongpe.com/">Gongpe Consulting</a><a class="hover:text-white" href="mailto:support@gongpe.com">Email</a></div><p class="text-xs text-[#777181]">© <span id="year"></span> Gongpe Technologies. All rights reserved.</p></div></footer>
-<script>
-  const menuButton=document.getElementById('menuButton');const mobileMenu=document.getElementById('mobileMenu');menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));mobileMenu.classList.toggle('hidden',open)});mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.add('hidden');menuButton.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();
-</script>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openModal() {
+            document.getElementById('engagementModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('engagementModal').classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out! We will contact you shortly.');
+            closeModal();
+        }
+
+        document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
+    </script>
 </body>
 </html>
