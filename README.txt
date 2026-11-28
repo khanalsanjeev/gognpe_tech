@@ -1,11 +1,26 @@
 GONGPE TECHNOLOGIES WEBSITE
 
-Deployment: tech.gongpe.com
+READY-TO-PUBLISH STATIC WEBSITE
 
-Upload the contents of this package to your website root. Create an assets/ folder in the root and place your existing brand files there:
-- assets/favicon.ico (browser favicon)
-- assets/favicon.png (header/footer brand mark, PNG)
+1. Upload the contents of this folder to the root of your GitHub Pages repository (or your hosting web root).
+2. If you have your brand files, create an assets folder and place these files inside it:
+   - assets/favicon.ico
+   - assets/favicon.png
+   The HTML references these exact paths. The ZIP intentionally does not include substitute logo files.
+3. Enable GitHub Pages for the repository as usual.
 
-The HTML references these exact paths. No substitute logo or image assets are included.
+Tailwind CSS is already compiled into assets/css/tailwind.css. The live website does not load the Tailwind CDN and does not need Node.js, npm, or a build step on GitHub Pages. The compiled CSS is served as a normal static file.
 
-The site uses Tailwind CSS via CDN and Google Fonts, so an internet connection is required for those resources. Update the contact email and any business details if required before publishing.
+OPTIONAL: FOR FUTURE DESIGN/HTML CHANGES
+
+This project uses Tailwind CSS v4.1.10.
+- Install Node.js, then run: npm install
+- For automatic CSS rebuilding while editing: npm run dev
+- Before publishing changes: npm run build
+
+Commit the updated assets/css/tailwind.css along with your HTML changes. Do not upload node_modules.
+
+Google Fonts are still loaded externally from Google Fonts. The site remains functional if those fonts are unavailable, using the declared sans-serif fallbacks.
+
+Deployment URL configured in the page: https://tech.gongpe.com/
+Contact email: support@gongpe.com

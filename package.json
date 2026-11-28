@@ -1,0 +1,13 @@
+{
+  "name": "gongpe-technologies-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "@tailwindcss/cli -i ./src/input.css -o ./assets/css/tailwind.css --watch",
+    "build": "@tailwindcss/cli -i ./src/input.css -o ./assets/css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.1.10",
+    "tailwindcss": "4.1.10"
+  }
+}
